@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>Mayle Timetable</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+			rel="stylesheet" />
+		<link rel="stylesheet" href="./css/main.min.css?v=1" />
+		<script
+			src="https://code.jquery.com/jquery-3.6.1.slim.min.js"
+			integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA="
+			crossorigin="anonymous"></script>
+	</head>
+
+	<body>
+		<header class="header">
+			<button type="button" class="header__burger">
+				<svg class="header__burger-icon">
+					<use href="./media/icons.svg#burger"></use>
+				</svg>
+			</button>
+			<a href="./index.html"
+				><img
+					src="./media/logo.png"
+					alt="Header logotype"
+					class="header__logo"
+			/></a>
+		</header>
+		<main class="main">
+			<div class="container">
+				<h1 class="section-title">Завдання</h1>
+				<div class="timetable" data-aos="fade-up">
+					<div class="timetable__day">
+						<div class="timetable__day-header">Понеділок</div>
+						<ul class="timetable__day-lesson-container">
+							<li
+								class="timetable__day-lesson timetable__day-task">
+								<details>
+									<summary>
+										<h2 class="timetable__day-lesson-title">
+											Математика (практика)
+										</h2>
+										<p class="timetable__day-lesson-time">
+											8:00 - 9:20
+										</p>
+									</summary>
+								</details>
+							</li>
+							<li class="timetable__day-lesson">
+								<details>
+									<summary>
+										<h2 class="timetable__day-lesson-title">
+											Англійська мова
+										</h2>
+										<p class="timetable__day-lesson-time">
+											9:35 - 10:55
+										</p>
+									</summary>
+								</details>
+							</li>
+							<li class="timetable__day-lesson">
+								<h2 class="timetable__day-lesson-title">
+									Гігієна праці
+								</h2>
+								<p class="timetable__day-lesson-time">
+									11:20 - 12:40
+								</p>
+							</li>
+							<li class="timetable__day-lesson">
+								<h2 class="timetable__day-lesson-title">
+									Інженерна графіка
+								</h2>
+								<p class="timetable__day-lesson-time">
+									12:55 - 14:15
+								</p>
+							</li>
+							<li class="timetable__day-lesson">
+								<h2 class="timetable__day-lesson-title">
+									Інформатика
+								</h2>
+								<p class="timetable__day-lesson-time">
+									14:30 - 15:50
+								</p>
+							</li>
+							<li class="timetable__day-lesson">
+								<h2 class="timetable__day-lesson-title">
+									Введення до спеціальності
+								</h2>
+								<p class="timetable__day-lesson-time">
+									16:05 - 17:25
+								</p>
+							</li>
+						</ul>
+
+						<div class="timetable__day-header">Вівторок</div>
+						<ul class="timetable__day-lesson-container">
+							<li class="timetable__day-lesson">
+								<h2 class="timetable__day-lesson-title">
+									Занять немає
+								</h2>
+							</li>
+						</ul>
+
+						<div class="timetable__day-header">Середа</div>
+						<ul class="timetable__day-lesson-container">
+							<li class="timetable__day-lesson">
+								<h2 class="timetable__day-lesson-title">
+									Введення до спеціальності
+								</h2>
+								<p class="timetable__day-lesson-time">
+									8:00 - 9:20
+								</p>
+							</li>
+							<li class="timetable__day-lesson">
+								<h2 class="timetable__day-lesson-title">
+									Гідрогеологія (лекція)
+								</h2>
+								<p class="timetable__day-lesson-time">
+									9:30 - 10:50
+								</p>
+							</li>
+							<li class="timetable__day-lesson">
+								<h2 class="timetable__day-lesson-title">
+									Гідрогеологія (практика)
+								</h2>
+								<p class="timetable__day-lesson-time">
+									11:20 - 12:40
+								</p>
+							</li>
+						</ul>
+
+						<div class="timetable__day-header">Четвер</div>
+						<ul class="timetable__day-lesson-container">
+							<li class="timetable__day-lesson">
+								<h2 class="timetable__day-lesson-title">
+									Фізкультура
+								</h2>
+								<p class="timetable__day-lesson-time">
+									8:00 - 9:20
+								</p>
+							</li>
+							<li class="timetable__day-lesson">
+								<h2 class="timetable__day-lesson-title">
+									Математика (лекція)
+								</h2>
+								<p class="timetable__day-lesson-time">
+									9:30 - 10:50
+								</p>
+							</li>
+						</ul>
+
+						<div class="timetable__day-header">П'ятниця</div>
+						<ul
+							class="timetable__day-lesson-container timetable__day-last">
+							<li class="timetable__day-lesson">
+								<h2 class="timetable__day-lesson-title">
+									Занять немає
+								</h2>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="notes__preview">
+					<input
+						class="notes__title"
+						type="text"
+						placeholder="Enter the title..." />
+					<textarea
+						class="notes__body"
+						name="textField"
+						spellcheck="false"
+						placeholder="Type here..."></textarea>
+				</div>
+			</div>
+		</main>
+		<footer class="footer"></footer>
+
+		<script src="./js/main.js" type="module"></script>
+		<script src="./js/NotesView.js"></script>
+		<script src="./js/engine.js"></script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function () {
+				$(".carousel").slick({
+					accessibility: true,
+					arrows: true,
+					adaptiveHeight: false,
+					autoplay: true,
+					autoplaySpeed: 1000,
+					dots: true,
+					pauseOnFocus: false,
+					pauseOnHover: false,
+				});
+			});
+		</script>
+		<script>
+			AOS.init({
+				offset: 20,
+				duration: 600,
+			});
+		</script>
+	</body>
+</html>
