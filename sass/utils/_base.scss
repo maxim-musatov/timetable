@@ -4,7 +4,7 @@
 }
 
 body {
-	background-color: #fff3e3;
+	background-color: #242424;
 	font-family: "Mulish", sans-serif;
 	min-height: 100vh;
 	color: black;
@@ -30,6 +30,10 @@ ul {
 	margin: 0;
 }
 
+ul {
+	list-style: none;
+}
+
 .no-text-decor {
 	text-decoration: none;
 }
@@ -53,5 +57,5 @@ ul {
 	font-size: 2.7rem;
 	margin-bottom: 20px;
 	padding-left: 2%;
-	color: var(--text-primary);
+	color: var(--primary-color);
 }
