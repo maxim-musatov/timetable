@@ -1,4 +1,9 @@
-import App from "./App.js";
+const dayCard = document.querySelector(".timetable__day");
 
-const root = document.querySelector("#app1-2, #app1-1");
-const app = new App(root);
+const dayOpen = function () {
+	dayCard.classList.add("timetable__day-open");
+};
+
+dayCard.addEventListener("click", function () {
+	dayOpen();
+});
