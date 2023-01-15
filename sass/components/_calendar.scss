@@ -1,10 +1,5 @@
 .timetable {
 	width: 100%;
-	max-height: 75vh;
-	// background: rgba(255, 219, 174, 0.65);
-	// backdrop-filter: blur(10px);
-	// -webkit-backdrop-filter: blur(10px);
-	// border: 1px solid rgba(255, 219, 174, 0.325);
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-start;
@@ -13,6 +8,7 @@
 
 	&__day {
 		flex-basis: calc((100% - 10px) / 2);
+		min-width: 100px;
 		height: auto;
 		min-height: 150px;
 		display: flex;
@@ -22,9 +18,17 @@
 		padding: 10px 5px;
 		border: 1px solid rgba(255, 255, 255, 0.25);
 
+		@media (min-width: 768px) {
+			flex-basis: calc((100% - 20px) / 3);
+		}
+
+		@media (min-width: 1200px) {
+			flex-basis: calc((100% - 30px) / 4);
+		}
+
 		&-header {
 			font-family: var(--font-primary);
-			font-size: 1.1rem;
+			font-size: clamp(1rem, 1.3vw, 3rem);
 			color: white;
 			font-weight: 800;
 			margin-bottom: 7px;
@@ -49,13 +53,13 @@
 			font-family: var(--font-primary);
 
 			&-name {
-				font-size: 1rem;
+				font-size: clamp(1rem, 1.1vw, 2rem);
 				font-weight: 500;
 				margin-bottom: 3px;
 			}
 
 			&-time {
-				font-size: 0.8rem;
+				font-size: clamp(0.8rem, 0.8vw, 1.8rem);
 				font-weight: 400;
 			}
 		}
