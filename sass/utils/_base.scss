@@ -55,7 +55,12 @@ ul {
 	font-family: var(--font-heading);
 	font-weight: 800;
 	font-size: clamp(2.7rem, 3vw, 4rem);
-	margin-bottom: 20px;
 	padding-left: 2%;
 	color: var(--primary-color);
+	background-color: #242424;
+	padding: 20px 0;
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 10;
 }
