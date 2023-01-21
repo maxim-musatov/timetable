@@ -28,22 +28,19 @@ const tuesday = {
 };
 
 //MODAL OPEN/LOAD INFO
-const pendingTasksNum = function () {
-	const modalPendingTasks = document.querySelector(".modal__card-pending");
-
-	const calculatePendingTasks = mondayInfo.taskList.ged.concat(
-		mondayInfo.taskList.ukrLang
-	).length;
-	modalPendingTasks.textContent = calculatePendingTasks;
-};
-
 const openModal = function (dayName) {
 	const modalDayName = document.querySelector(".modal__card-header-name");
+	const modalPendingTasks = document.querySelector(".modal__card-pending");
 
 	const openModalAnim = function () {
 		modal.classList.add("modal-anim");
 		modalCard.classList.add("modal__card-anim");
 	};
+
+	const calculatePendingTasks = dayName.taskList.ged.concat(
+		dayName.taskList.ukrLang
+	).length;
+	modalPendingTasks.textContent = `${calculatePendingTasks} невыполненых задания`;
 
 	const lessonsListing = function () {
 		for (const lesson of dayName.lessonList) {
