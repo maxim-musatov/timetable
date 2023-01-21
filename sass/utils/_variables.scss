@@ -1,7 +1,8 @@
 :root {
 	--background-color: #242424;
-	--background-color-light: #fff2c5;
-	--primary-color: white;
+	--background-color-light: #dce5ec;
+	--secondary-color: #c4d4e6;
+	--primary-color: #2a3f57;
 	--font-heading: "Ubuntu", sans-serif;
 	--font-primary: "Overpass", sans-serif;
 	--monday-color: #4a6be0;
@@ -9,4 +10,5 @@
 	--wednesday-color: rgb(187, 83, 86);
 	--thursday-color: rgb(94, 162, 113);
 	--friday-color: rgb(119, 132, 131);
+	--anim-duration: 0.3s;
 }

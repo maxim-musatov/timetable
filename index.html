@@ -44,7 +44,7 @@
 					<!-- ПОНЕДЕЛЬНИК -->
 					<div
 						class="timetable__day timetable__day-monday"
-						onclick="openModal()">
+						onclick="openModal(monday)">
 						<h2 class="timetable__day-header">Понедельник</h2>
 						<ul class="timetable__day-lessons">
 							<li class="timetable__day-lesson">
@@ -84,7 +84,7 @@
 					<!-- ВТОРНИК -->
 					<div
 						class="timetable__day timetable__day-tuesday"
-						onclick="openModal()">
+						onclick="openModal(tuesday)">
 						<h2 class="timetable__day-header">Вторник</h2>
 						<ul class="timetable__day-lessons">
 							<li class="timetable__day-lesson">
@@ -114,7 +114,9 @@
 						</ul>
 					</div>
 					<!-- СРЕДА -->
-					<div class="timetable__day timetable__day-wednesday">
+					<div
+						class="timetable__day timetable__day-wednesday"
+						onclick="openModal('Среда')">
 						<h2 class="timetable__day-header">Среда</h2>
 						<ul class="timetable__day-lessons">
 							<li class="timetable__day-lesson">
@@ -152,7 +154,9 @@
 						</ul>
 					</div>
 					<!-- ЧЕТВЕРГ -->
-					<div class="timetable__day timetable__day-thursday">
+					<div
+						class="timetable__day timetable__day-thursday"
+						onclick="openModal('Четверг')">
 						<h2 class="timetable__day-header">Четверг</h2>
 						<ul class="timetable__day-lessons">
 							<li class="timetable__day-lesson">
@@ -182,7 +186,9 @@
 						</ul>
 					</div>
 					<!-- ПЯТНИЦА -->
-					<div class="timetable__day timetable__day-friday">
+					<div
+						class="timetable__day timetable__day-friday"
+						onclick="openModal('Пятница')">
 						<h2 class="timetable__day-header">Пятница</h2>
 						<ul class="timetable__day-lessons">
 							<li class="timetable__day-lesson">
@@ -217,18 +223,14 @@
 		<footer class="footer"></footer>
 
 		<div class="modal">
-			<div class="container">
-				<div class="modal__card">
-					<div class="modal__card-header">
-						<h2>Понедельник</h2>
-					</div>
-					<div class="modal__card-pending">
-						3 невыполненых задания
-					</div>
-					<ul class="modal__card-lessons">
-						<li class="modal__card-lesson">Математика</li>
-					</ul>
+			<div class="modal__card">
+				<div class="modal__card-header">
+					<h2 class="modal__card-header-name">--</h2>
 				</div>
+				<div class="modal__card-pending">4 невыполненых задания</div>
+				<ul class="modal__card-lessons">
+					<!-- <li class="modal__card-lesson">lesson-name</li> -->
+				</ul>
 			</div>
 		</div>
 
