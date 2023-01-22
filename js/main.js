@@ -2,6 +2,7 @@
 const modal = document.querySelector(".modal");
 const modalCard = document.querySelector(".modal__card");
 const lessonsList = document.querySelector(".modal__card-lessons");
+const tasksList = document.querySelector(".modal__card-lesson-task-list");
 
 //MODAL DAYS INFO
 const monday = {
@@ -16,6 +17,7 @@ const monday = {
 		ged: ["сделать конспект", "переписать параграф"],
 		ukrLang: ["выполнить задание в конце конспекта", "переписать параграф"],
 	},
+	accentColor: "#4a6be0",
 };
 
 const tuesday = {
@@ -25,10 +27,41 @@ const tuesday = {
 		ged: ["сделать конспект", "переписать параграф"],
 		ukrLang: ["выполнить задание в конце конспекта", "переписать параграф"],
 	},
+	accentColor: "rgb(229, 161, 51)",
+};
+
+const wednesday = {
+	name: "Среда",
+	lessonList: ["Біометрія", "Біометрія", "Фізика"],
+	taskList: {
+		ged: ["сделать конспект", "переписать параграф"],
+		ukrLang: ["выполнить задание в конце конспекта", "переписать параграф"],
+	},
+	accentColor: "rgb(187, 83, 86)",
+};
+
+const thursday = {
+	name: "Четверг",
+	lessonList: ["Біометрія", "Біометрія", "Фізика"],
+	taskList: {
+		ged: ["сделать конспект", "переписать параграф"],
+		ukrLang: ["выполнить задание в конце конспекта", "переписать параграф"],
+	},
+	accentColor: "rgb(94, 162, 113)",
+};
+
+const friday = {
+	name: "Пятница",
+	lessonList: ["Біометрія", "Біометрія", "Фізика"],
+	taskList: {
+		ged: ["сделать конспект", "переписать параграф"],
+		ukrLang: ["выполнить задание в конце конспекта", "переписать параграф"],
+	},
+	accentColor: "rgb(119, 132, 131)",
 };
 
 //MODAL OPEN/LOAD INFO
-const openModal = function (dayName) {
+const openModal = function (dayName, taskName) {
 	const modalDayName = document.querySelector(".modal__card-header-name");
 	const modalPendingTasks = document.querySelector(".modal__card-pending");
 
@@ -45,19 +78,33 @@ const openModal = function (dayName) {
 	const lessonsListing = function () {
 		for (const lesson of dayName.lessonList) {
 			const createModalLesson = document.createElement("li");
+			const createModalTask = document.createElement("li");
 			createModalLesson.className = "modal__card-lesson";
+			createModalTask.className = "modal__card-lesson-task";
+			createModalLesson.textContent = lesson;
 			createModalLesson.textContent = lesson;
 			lessonsList.appendChild(createModalLesson);
 		}
 	};
 
+	const tasksListing = function () {
+		for (const task of dayName.taskList.taskName) {
+			const createModalTask = document.createElement("li");
+			createModalTask.className = "modal__card-lesson-task";
+			createModalTask.textContent = task;
+			tasksList.appendChild(createModalTask);
+		}
+	};
+
 	modal.style.display = "flex";
 	modalDayName.textContent = dayName.name;
+	modalCard.style.borderColor = dayName.accentColor;
+	modalPendingTasks.style.backgroundColor = dayName.accentColor;
 	lessonsListing();
 	openModalAnim();
 };
 
-let canClose = false;
+let canClose = true;
 
 //MODAL CLOSE
 modalCard.addEventListener("mouseover", function () {
@@ -70,19 +117,10 @@ modalCard.addEventListener("mouseout", function () {
 
 modal.addEventListener("click", function () {
 	if (canClose) {
-		// lessonsList.removeChild("li");
 		modal.style.display = "none";
 	}
 });
 
-// for (const lesson of lessons) {
-// 	lessonAdd.textContent = lessons[lesson];
-// 	lessonsList.append(lessonAdd);
-// 	continue;
-// }
-
-// for (let i = 0; i < lessons.length; i += 1) {
-// 	lessonAdd.className = `lesson${i}`;
-// 	lessonAdd.textContent = lessons[i];
-// 	lessonsList.append(`lesson${i}`);
-// }
+const closeModal = function () {
+	modal.style.display = "none";
+};

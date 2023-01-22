@@ -116,7 +116,7 @@
 					<!-- СРЕДА -->
 					<div
 						class="timetable__day timetable__day-wednesday"
-						onclick="openModal('Среда')">
+						onclick="openModal(wednesday)">
 						<h2 class="timetable__day-header">Среда</h2>
 						<ul class="timetable__day-lessons">
 							<li class="timetable__day-lesson">
@@ -156,7 +156,7 @@
 					<!-- ЧЕТВЕРГ -->
 					<div
 						class="timetable__day timetable__day-thursday"
-						onclick="openModal('Четверг')">
+						onclick="openModal(thursday)">
 						<h2 class="timetable__day-header">Четверг</h2>
 						<ul class="timetable__day-lessons">
 							<li class="timetable__day-lesson">
@@ -188,7 +188,7 @@
 					<!-- ПЯТНИЦА -->
 					<div
 						class="timetable__day timetable__day-friday"
-						onclick="openModal('Пятница')">
+						onclick="openModal(friday)">
 						<h2 class="timetable__day-header">Пятница</h2>
 						<ul class="timetable__day-lessons">
 							<li class="timetable__day-lesson">
@@ -232,6 +232,7 @@
 					<!-- <li class="modal__card-lesson">lesson-name</li> -->
 				</ul>
 			</div>
+			<button class="modal__close" onclick="closeModal()">Закрыть</button>
 		</div>
 
 		<script src="./js/main.js"></script>

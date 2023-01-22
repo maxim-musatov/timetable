@@ -7,6 +7,7 @@
 	background-color: rgba(60, 60, 60, 0.7);
 	z-index: 999;
 	display: none;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 
@@ -39,6 +40,8 @@
 		background-color: var(--background-color-light);
 		border-radius: 15px;
 		border-bottom: 7px solid rgb(74, 107, 224);
+		margin-bottom: 10px;
+		font-family: var(--font-heading);
 		animation-name: modalCardAnim;
 		animation-duration: var(--anim-duration);
 		animation-play-state: running;
@@ -96,12 +99,31 @@
 
 		&-lesson {
 			width: 100%;
-			padding: 5px;
+			padding: 10px;
 			background-color: var(--secondary-color);
 			border-radius: 5px;
 			font-family: var(--font-primary);
-			font-size: 1.2rem;
-			font-weight: 600;
+			font-size: clamp(1.2rem, 1.1vw, 2rem);
+			font-weight: 700;
+			color: var(--primary-color);
+			cursor: pointer;
+		}
+	}
+
+	&__close {
+		width: 95%;
+		padding: 15px;
+		border-radius: 15px;
+		border: none;
+		font-family: var(--font-heading);
+		font-size: clamp(1.1rem, 1.3vw, 3rem);
+		color: var(--primary-color);
+		font-weight: 900;
+		cursor: pointer;
+		background-color: var(--background-color-light);
+
+		@media (min-width: 768px) {
+			width: 600px;
 		}
 	}
 }
