@@ -28,6 +28,7 @@
 					<svg class="header__burger-icon">
 						<use href="./media/icons.svg#burger"></use>
 					</svg>
+					Menu
 				</button>
 				<a href="https://maxim-musatov.github.io/timetable/"
 					><img
@@ -47,7 +48,7 @@
 						onclick="openModal(monday)">
 						<h2 class="timetable__day-header">Понедельник</h2>
 						<ul class="timetable__day-lessons">
-							<li class="timetable__day-lesson">
+							<li class="timetable__day-lesson" onclick="">
 								<h3 class="timetable__day-lesson-name">
 									Громадська ек. діяльність
 								</h3>
@@ -230,6 +231,7 @@
 				<div class="modal__card-pending">-- невыполненых задания</div>
 				<ul class="modal__card-lessons">
 					<!-- <li class="modal__card-lesson">lesson-name</li> -->
+					<ul class="modal__card-lesson-task-list"></ul>
 				</ul>
 			</div>
 			<button class="modal__close" onclick="closeModal()">Закрыть</button>
