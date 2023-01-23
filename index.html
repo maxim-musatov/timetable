@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="rus">
 	<head>
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -230,8 +230,10 @@
 				</div>
 				<div class="modal__card-pending">-- невыполненых задания</div>
 				<ul class="modal__card-lessons">
-					<!-- <li class="modal__card-lesson">lesson-name</li> -->
-					<ul class="modal__card-lesson-task-list"></ul>
+					<!-- <li class="modal__card-lesson">lesson-name</li>
+					<ul class="modal__card-lesson-task-container">
+						<li class="modal__card-lesson-task"></li>
+					</ul> -->
 				</ul>
 			</div>
 			<button class="modal__close" onclick="closeModal()">Закрыть</button>
@@ -239,20 +241,6 @@
 
 		<script src="./js/main.js"></script>
 		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-		<script type="text/javascript">
-			$(document).ready(function () {
-				$(".carousel").slick({
-					accessibility: true,
-					arrows: true,
-					adaptiveHeight: false,
-					autoplay: true,
-					autoplaySpeed: 1000,
-					dots: true,
-					pauseOnFocus: false,
-					pauseOnHover: false,
-				});
-			});
-		</script>
 		<script>
 			AOS.init({
 				offset: 20,

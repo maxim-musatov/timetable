@@ -89,12 +89,13 @@
 			background-color: var(--monday-color);
 			border-left: 5px solid red;
 			margin-bottom: 15px;
+			box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 		}
 
 		&-lessons {
 			display: flex;
 			flex-direction: column;
-			gap: 4px;
+			align-items: center;
 		}
 
 		&-lesson {
@@ -107,6 +108,21 @@
 			font-weight: 700;
 			color: var(--primary-color);
 			cursor: pointer;
+			box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+			z-index: 500;
+
+			&-task-container {
+				width: 98%;
+				padding: 10px;
+				border-radius: 0 0 5px 5px;
+				background-color: lightsteelblue;
+				margin-bottom: 5px;
+			}
+
+			&-task {
+				font-family: var(--font-primary);
+				font-size: 1.2rem;
+			}
 		}
 	}
 
