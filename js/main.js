@@ -177,7 +177,8 @@ const openModal = function (dayName) {
 			if (lesson.tasks.length !== 0) {
 				createModalTaskContainer.className =
 					"modal__card-lesson-task-container";
-				createModalTask.innerHTML = lesson.tasks.join(";<br>");
+				// createModalTask.innerHTML = lesson.tasks.join(";<br>");
+				createModalTask.innerHTML = `<span class='trying'>${lesson.tasks};</span>`;
 				createModalTask.className = "modal__card-lesson-task";
 				createModalTaskContainer.appendChild(createModalTask);
 			}
