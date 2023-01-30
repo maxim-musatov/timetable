@@ -56,7 +56,7 @@ const tuesday = {
 			],
 		},
 		{
-			name: "Біологія",
+			name: "Математика",
 			tasks: [],
 		},
 	],
@@ -169,7 +169,8 @@ const openModal = function (dayName) {
 		for (const lesson of dayName.lessonList) {
 			const createModalLesson = document.createElement("li");
 			const createModalTaskContainer = document.createElement("ul");
-			const createModalTask = document.createElement("li");
+			const tasksListing = lesson.tasks;
+
 			createModalLesson.className = "modal__card-lesson";
 			createModalLesson.textContent = lesson.name;
 			lessonsList.appendChild(createModalLesson);
@@ -177,27 +178,23 @@ const openModal = function (dayName) {
 			if (lesson.tasks.length !== 0) {
 				createModalTaskContainer.className =
 					"modal__card-lesson-task-container";
-				// createModalTask.innerHTML = lesson.tasks.join(";<br>");
-				createModalTask.innerHTML = `<span class='trying'>${lesson.tasks};</span>`;
-				createModalTask.className = "modal__card-lesson-task";
-				createModalTaskContainer.appendChild(createModalTask);
+
+				const markup = tasksListing
+					.map(
+						(task) =>
+							`<li class="modal__card-lesson-task">${task}</li>`
+					)
+					.join("");
+
+				createModalTaskContainer.innerHTML = markup;
 			}
 		}
 	};
 
-	// const tasksListing = function () {
-	// 	for (const task of dayName.lessonList) {
-	// 		const createModalTask = document.createElement("li");
-	// 		createModalTask.className = "modal__card-lesson-task";
-	// 		createModalTask.textContent = task.tasks;
-	// 		tasksList.appendChild(createModalTask);
-	// 	}
-	// };
-
 	modal.style.display = "flex";
 	modalDayName.textContent = dayName.name;
 	modalCard.style.borderColor = dayName.accentColor;
-	modalPendingTasks.style.backgroundColor = dayName.accentColor;
+	// modalPendingTasks.style.backgroundColor = dayName.accentColor;
 	lessonsListing();
 	openModalAnim();
 };
@@ -205,6 +202,11 @@ const openModal = function (dayName) {
 let canClose = true;
 
 //MODAL CLOSE
+const closeModal = function () {
+	modal.style.display = "none";
+	lessonsList.innerHTML = "";
+};
+
 modalCard.addEventListener("mouseover", function () {
 	canClose = false;
 });
@@ -215,10 +217,6 @@ modalCard.addEventListener("mouseout", function () {
 
 modal.addEventListener("click", function () {
 	if (canClose) {
-		modal.style.display = "none";
+		closeModal();
 	}
 });
-
-const closeModal = function () {
-	modal.style.display = "none";
-};

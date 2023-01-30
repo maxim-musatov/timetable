@@ -24,11 +24,10 @@
 	<body>
 		<div class="container">
 			<header class="header">
-				<button type="button" class="header__burger">
+				<button type="button" class="header__burger" title="Menu">
 					<svg class="header__burger-icon">
 						<use href="./media/icons.svg#burger"></use>
 					</svg>
-					Меню
 				</button>
 				<a href="https://maxim-musatov.github.io/timetable/"
 					><img
@@ -66,15 +65,7 @@
 							</li>
 							<li class="timetable__day-lesson">
 								<h3 class="timetable__day-lesson-name">
-									Англ. Мова
-								</h3>
-								<p class="timetable__day-lesson-time">
-									8:00 - 9:20
-								</p>
-							</li>
-							<li class="timetable__day-lesson">
-								<h3 class="timetable__day-lesson-name">
-									Біологія
+									Укр. Мова
 								</h3>
 								<p class="timetable__day-lesson-time">
 									8:00 - 9:20
@@ -88,6 +79,14 @@
 						onclick="openModal(tuesday)">
 						<h2 class="timetable__day-header">Вторник</h2>
 						<ul class="timetable__day-lessons">
+							<li class="timetable__day-lesson">
+								<h3 class="timetable__day-lesson-name">
+									Англ. Мова
+								</h3>
+								<p class="timetable__day-lesson-time">
+									8:00 - 9:20
+								</p>
+							</li>
 							<li class="timetable__day-lesson">
 								<h3 class="timetable__day-lesson-name">
 									Біометрія
@@ -144,14 +143,6 @@
 									8:00 - 9:20
 								</p>
 							</li>
-							<li class="timetable__day-lesson">
-								<h3 class="timetable__day-lesson-name">
-									Біологія
-								</h3>
-								<p class="timetable__day-lesson-time">
-									8:00 - 9:20
-								</p>
-							</li>
 						</ul>
 					</div>
 					<!-- ЧЕТВЕРГ -->
@@ -162,7 +153,7 @@
 						<ul class="timetable__day-lessons">
 							<li class="timetable__day-lesson">
 								<h3 class="timetable__day-lesson-name">
-									Біометрія
+									Фізкультура
 								</h3>
 								<p class="timetable__day-lesson-time">
 									8:00 - 9:20
@@ -170,7 +161,7 @@
 							</li>
 							<li class="timetable__day-lesson">
 								<h3 class="timetable__day-lesson-name">
-									Біометрія
+									Біологія
 								</h3>
 								<p class="timetable__day-lesson-time">
 									8:00 - 9:20
@@ -178,7 +169,15 @@
 							</li>
 							<li class="timetable__day-lesson">
 								<h3 class="timetable__day-lesson-name">
-									Фізика
+									Біологія
+								</h3>
+								<p class="timetable__day-lesson-time">
+									8:00 - 9:20
+								</p>
+							</li>
+							<li class="timetable__day-lesson">
+								<h3 class="timetable__day-lesson-name">
+									Громадська ек. діяльність
 								</h3>
 								<p class="timetable__day-lesson-time">
 									8:00 - 9:20
@@ -187,7 +186,7 @@
 						</ul>
 					</div>
 					<!-- ПЯТНИЦА -->
-					<div
+					<!-- <div
 						class="timetable__day timetable__day-friday"
 						onclick="openModal(friday)">
 						<h2 class="timetable__day-header">Пятница</h2>
@@ -217,7 +216,7 @@
 								</p>
 							</li>
 						</ul>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</main>
@@ -235,8 +234,19 @@
 						<li class="modal__card-lesson-task"></li>
 					</ul> -->
 				</ul>
+				<button type="button" class="modal__add-btn">
+					<svg class="modal__add-btn-icon">
+						<use href="./media/icons.svg#plus"></use>
+					</svg>
+					Добавить задание
+				</button>
 			</div>
-			<button class="modal__close" onclick="closeModal()">Закрыть</button>
+			<button
+				type="button"
+				class="modal__close-btn"
+				onclick="closeModal()">
+				Закрыть
+			</button>
 		</div>
 
 		<script src="./js/main.js"></script>

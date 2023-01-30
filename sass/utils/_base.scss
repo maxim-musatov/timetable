@@ -57,7 +57,8 @@ ul {
 	font-weight: 800;
 	font-size: clamp(2.7rem, 3vw, 4rem);
 	padding-left: 2%;
-	color: var(--primary-color);
+	letter-spacing: -0.05rem;
+	color: var(--text-color-primary);
 	background-color: var(--background-color-light);
 	padding: 5px 0 20px 0;
 	position: sticky;
