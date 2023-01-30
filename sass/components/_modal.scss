@@ -136,28 +136,30 @@
 	}
 
 	&__add-btn {
+		width: 50px;
+		height: 50px;
 		position: sticky;
 		float: right;
 		bottom: 5px;
 		z-index: 500;
 		display: flex;
+		justify-content: center;
 		align-items: center;
-		gap: 5px;
 		border: none;
-		background-color: var(--monday-color);
-		padding: 8px;
+		padding: 10px;
 		font-family: var(--font-heading);
 		color: white;
-		font-size: 1.1rem;
-		font-weight: 500;
-		border-radius: 20px;
-		box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-			rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+		border-radius: 16px;
+		box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 
 		&-icon {
 			width: 23px;
 			height: 23px;
 			fill: white;
+		}
+
+		&-text {
+			display: none;
 		}
 	}
 

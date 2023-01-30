@@ -153,6 +153,7 @@ const friday = {
 //MODAL OPEN/LOAD INFO
 const openModal = function (dayName) {
 	const modalDayName = document.querySelector(".modal__card-header-name");
+	const modalAddBtn = document.querySelector(".modal__add-btn");
 	const modalPendingTasks = document.querySelector(".modal__card-pending");
 
 	const openModalAnim = function () {
@@ -194,7 +195,7 @@ const openModal = function (dayName) {
 	modal.style.display = "flex";
 	modalDayName.textContent = dayName.name;
 	modalCard.style.borderColor = dayName.accentColor;
-	// modalPendingTasks.style.backgroundColor = dayName.accentColor;
+	modalAddBtn.style.backgroundColor = dayName.accentColor;
 	lessonsListing();
 	openModalAnim();
 };
