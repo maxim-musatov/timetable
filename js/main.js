@@ -156,11 +156,6 @@ const openModal = function (dayName) {
 	const modalAddBtn = document.querySelector(".modal__add-btn");
 	const modalPendingTasks = document.querySelector(".modal__card-pending");
 
-	const openModalAnim = function () {
-		modal.classList.add("modal-anim");
-		modalCard.classList.add("modal__card-anim");
-	};
-
 	// const calculatePendingTasks = dayName.taskList.ged.concat(
 	// 	dayName.taskList.ukrLang
 	// ).length;
@@ -197,7 +192,6 @@ const openModal = function (dayName) {
 	modalCard.style.borderColor = dayName.accentColor;
 	modalAddBtn.style.backgroundColor = dayName.accentColor;
 	lessonsListing();
-	openModalAnim();
 };
 
 let canClose = true;

@@ -10,15 +10,12 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-
-	&-anim {
-		animation-name: modalAnim;
-		animation-duration: var(--anim-duration);
-		animation-play-state: running;
-		animation-iteration-count: 1;
-		animation-fill-mode: forwards;
-		animation-direction: normal;
-	}
+	animation-name: modalAnim;
+	animation-duration: var(--anim-duration);
+	animation-play-state: running;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+	animation-direction: normal;
 
 	@keyframes modalAnim {
 		0% {
@@ -124,7 +121,7 @@
 
 			&-task {
 				background-color: white;
-				border-radius: 5px;
+				border-radius: 0 7px 7px 7px;
 				margin-bottom: 3px;
 				padding: 7px;
 				font-family: var(--font-primary);
@@ -151,6 +148,7 @@
 		color: white;
 		border-radius: 16px;
 		box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+		cursor: pointer;
 
 		&-icon {
 			width: 23px;
