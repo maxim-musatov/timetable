@@ -188,6 +188,7 @@ const openModal = function (dayName) {
 	};
 
 	modal.style.display = "flex";
+	modalCard.style.display = "initial";
 	modalDayName.textContent = dayName.name;
 	modalCard.style.borderColor = dayName.accentColor;
 	modalAddBtn.style.backgroundColor = dayName.accentColor;
@@ -195,6 +196,19 @@ const openModal = function (dayName) {
 };
 
 let canClose = true;
+
+//MODAL CREATE
+const createTaskBtn = document.querySelector(".modal__add-btn");
+const createModal = document.querySelector(".modal__create");
+const tasklistModal = document.querySelector(".modal__tasklist");
+const createSubmitBtn = document.querySelector(".modal__create-form-submit");
+
+createTaskBtn.addEventListener("click", function () {
+	tasklistModal.style.display = "none";
+	createTaskBtn.style.display = "none";
+	createModal.style.display = "initial";
+	canClose = false;
+});
 
 //MODAL CLOSE
 const closeModal = function () {
@@ -211,7 +225,7 @@ modalCard.addEventListener("mouseout", function () {
 });
 
 modal.addEventListener("click", function () {
-	if (canClose) {
+	if (modalCard.style.display === "initial" && canClose) {
 		closeModal();
 	}
 });

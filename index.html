@@ -39,7 +39,7 @@
 		</div>
 		<main class="main">
 			<div class="container">
-				<h1 class="section-title">Задания</h1>
+				<h1 class="section-title">Расписание</h1>
 				<div class="timetable" data-aos="fade-up">
 					<!-- ПОНЕДЕЛЬНИК -->
 					<div
@@ -185,45 +185,13 @@
 							</li>
 						</ul>
 					</div>
-					<!-- ПЯТНИЦА -->
-					<!-- <div
-						class="timetable__day timetable__day-friday"
-						onclick="openModal(friday)">
-						<h2 class="timetable__day-header">Пятница</h2>
-						<ul class="timetable__day-lessons">
-							<li class="timetable__day-lesson">
-								<h3 class="timetable__day-lesson-name">
-									Біометрія
-								</h3>
-								<p class="timetable__day-lesson-time">
-									8:00 - 9:20
-								</p>
-							</li>
-							<li class="timetable__day-lesson">
-								<h3 class="timetable__day-lesson-name">
-									Біометрія
-								</h3>
-								<p class="timetable__day-lesson-time">
-									8:00 - 9:20
-								</p>
-							</li>
-							<li class="timetable__day-lesson">
-								<h3 class="timetable__day-lesson-name">
-									Фізика
-								</h3>
-								<p class="timetable__day-lesson-time">
-									8:00 - 9:20
-								</p>
-							</li>
-						</ul>
-					</div> -->
 				</div>
 			</div>
 		</main>
 		<footer class="footer"></footer>
 
 		<div class="modal">
-			<div class="modal__card">
+			<div class="modal__card modal__tasklist">
 				<div class="modal__card-header">
 					<h2 class="modal__card-header-name">--</h2>
 				</div>
@@ -240,6 +208,56 @@
 					</svg>
 					<span class="modal__add-btn-text">Добавить задание</span>
 				</button>
+			</div>
+			<div class="modal__card modal__create">
+				<div class="modal__card-header modal__create-header">
+					<h2 class="modal__card-header-name">Новое задание</h2>
+				</div>
+				<form name="create-task-from" class="modal__create-form">
+					<label for="lesson-select" class="modal__create-form-label"
+						>Предмет
+						<select
+							name="lesson-select"
+							id="lesson-select"
+							class="modal__create-form-select"
+							type="text"
+							placeholder="Выберите предмет">
+							<option value="modal-room-people">1</option>
+							<option value="modal-room-people">2</option>
+							<option value="modal-room-people">3</option>
+							<option value="modal-room-people">4</option>
+						</select>
+					</label>
+					<label
+						for="task-description"
+						class="modal__create-form-label"
+						>Описание задания
+						<textarea
+							name="task-description"
+							id="task-description"
+							class="modal__create-form-textarea"
+							placeholder="Новое задание..."></textarea>
+					</label>
+					<label for="" class="modal__create-form-label"
+						>Срок выполнения
+						<input
+							name="deadline-select"
+							id="deadline-select"
+							class="modal__create-form-deadline"
+							type="date" />
+					</label>
+					<div class="modal__create-form-controls">
+						<button type="button" class="modal__create-form-cancel">
+							Отменить
+						</button>
+						<button type="submit" class="modal__create-form-submit">
+							<svg class="modal__create-form-submit-icon">
+								<use href="./media/icons.svg#plus"></use>
+							</svg>
+							Создать
+						</button>
+					</div>
+				</form>
 			</div>
 			<button
 				type="button"
