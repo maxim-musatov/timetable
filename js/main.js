@@ -165,7 +165,12 @@ const openModal = function (dayName) {
 		for (const lesson of dayName.lessonList) {
 			const createModalLesson = document.createElement("li");
 			const createModalTaskContainer = document.createElement("ul");
+			const lessonName = lesson.name;
 			const tasksListing = lesson.tasks;
+			const newLessonsSelect = document.querySelector(
+				".modal__create-form-select"
+			);
+			const createLessonsListing = document.createElement("option");
 
 			createModalLesson.className = "modal__card-lesson";
 			createModalLesson.textContent = lesson.name;
@@ -184,6 +189,10 @@ const openModal = function (dayName) {
 
 				createModalTaskContainer.innerHTML = markup;
 			}
+
+			createLessonsListing.className = "modal__create-form-select-option";
+			createLessonsListing.innerHTML = lessonName;
+			newLessonsSelect.appendChild(createLessonsListing);
 		}
 	};
 
