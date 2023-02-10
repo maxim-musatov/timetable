@@ -151,17 +151,13 @@ const friday = {
 };
 
 //MODAL OPEN/LOAD INFO
-const openModal = function (dayName) {
+const openModal = (dayName) => {
 	const modalDayName = document.querySelector(".modal__card-header-name");
 	const modalAddBtn = document.querySelector(".modal__add-btn");
 	const modalPendingTasks = document.querySelector(".modal__card-pending");
+	const lessonHeader = document.querySelector(".timetable__day-lesson");
 
-	// const calculatePendingTasks = dayName.taskList.ged.concat(
-	// 	dayName.taskList.ukrLang
-	// ).length;
-	// modalPendingTasks.textContent = `${calculatePendingTasks} невыполненых задания`;
-
-	const lessonsListing = function () {
+	const lessonsListing = () => {
 		for (const lesson of dayName.lessonList) {
 			const createModalLesson = document.createElement("li");
 			const createModalTaskContainer = document.createElement("ul");
@@ -201,6 +197,7 @@ const openModal = function (dayName) {
 	modalDayName.textContent = dayName.name;
 	modalCard.style.borderColor = dayName.accentColor;
 	modalAddBtn.style.backgroundColor = dayName.accentColor;
+	lessonHeader.style.background = "var";
 	lessonsListing();
 };
 

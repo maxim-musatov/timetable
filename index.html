@@ -202,6 +202,9 @@
 						<li class="modal__card-lesson-task"></li>
 					</ul> -->
 				</ul>
+				<div class="modal__navbar">
+					<button class="btn">Back</button>
+				</div>
 				<button type="button" class="modal__add-btn">
 					<svg class="modal__add-btn-icon">
 						<use href="./media/icons.svg#plus"></use>
@@ -209,6 +212,7 @@
 					<span class="modal__add-btn-text">Добавить задание</span>
 				</button>
 			</div>
+
 			<div class="modal__card modal__create">
 				<div class="modal__card-header modal__create-header">
 					<h2 class="modal__card-header-name">Новое задание</h2>
@@ -234,19 +238,22 @@
 							class="modal__create-form-textarea"
 							placeholder="Новое задание..."></textarea>
 					</label>
-					<label for="" class="modal__create-form-label"
+					<label
+						for="deadline-select"
+						class="modal__create-form-label"
 						>Срок выполнения
 						<input
 							name="deadline-select"
 							id="deadline-select"
 							class="modal__create-form-deadline"
-							type="date" />
+							type="date"
+							value="2023-01-01" />
 					</label>
-					<div class="modal__create-form-controls">
-						<button type="button" class="modal__create-form-cancel">
+					<div class="modal__navbar">
+						<button type="button" class="btn__secondary">
 							Отменить
 						</button>
-						<button type="submit" class="modal__create-form-submit">
+						<button type="submit" class="btn">
 							<svg class="modal__create-form-submit-icon">
 								<use href="./media/icons.svg#plus"></use>
 							</svg>
@@ -255,12 +262,12 @@
 					</div>
 				</form>
 			</div>
-			<button
+			<!-- <button
 				type="button"
 				class="modal__close-btn"
 				onclick="closeModal()">
 				Закрыть
-			</button>
+			</button> -->
 		</div>
 
 		<script src="./js/main.js"></script>

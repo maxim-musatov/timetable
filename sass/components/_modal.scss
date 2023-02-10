@@ -4,7 +4,6 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	background-color: rgba(60, 60, 60, 0.7);
 	z-index: 999;
 	display: none;
 	flex-direction: column;
@@ -31,17 +30,18 @@
 	&__card {
 		width: 95%;
 		height: auto;
-		max-height: 85vh;
 		overflow-y: auto;
 		padding: 15px;
 		position: fixed;
 		margin: auto;
-		bottom: 65px;
-		overflow: auto;
+		top: 10px;
+		bottom: 10px;
 		display: initial;
-		background-color: lightgreen;
+		background: rgb(255, 255, 255, 0.7);
+		-webkit-backdrop-filter: blur(10px);
+		backdrop-filter: blur(10px);
+		border: 1px solid rgba(176, 196, 222, 0.25);
 		border-radius: 15px;
-		border-bottom: 7px solid rgb(74, 107, 224);
 		margin-bottom: 10px;
 		font-family: var(--font-heading);
 		animation-name: modalCardAnim;
@@ -100,6 +100,7 @@
 			flex-direction: column;
 			align-items: center;
 			margin-bottom: 10px;
+			gap: 5px;
 		}
 
 		&-lesson {
@@ -111,16 +112,17 @@
 			font-weight: 800;
 			color: var(--text-color-secondary);
 			z-index: 500;
-			background-color: var(--secondary-color);
-			border-radius: 10px 10px 0 0;
+			background-color: rgb(238, 251, 255, 0.8);
+			border-radius: 10px;
 			cursor: default;
+			box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
 			&-task-container {
 				width: 100%;
-				padding: 0 5px 3px 5px;
-				border-radius: 0 0 10px 10px;
-				margin-bottom: 5px;
-				background-color: var(--secondary-color);
+				padding: 8px 5px;
+				border-radius: 10px;
+				background-color: rgb(238, 251, 255, 0.8);
+				box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 			}
 
 			&-task {
@@ -133,6 +135,7 @@
 				font-weight: 500;
 				color: var(--text-color-primary);
 				cursor: default;
+				box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 			}
 		}
 	}
@@ -151,11 +154,11 @@
 			position: relative;
 
 			&-label {
+				width: 100%;
 				font-family: var(--font-primary);
 				font-size: clamp(1rem, 1.1vw, 2rem);
 				font-weight: 700;
 				color: var(--text-color-primary);
-				margin-left: 5px;
 				display: block;
 			}
 
@@ -198,30 +201,6 @@
 				background-color: white;
 			}
 
-			&-controls {
-				width: 100%;
-				display: flex;
-				justify-content: flex-end;
-				gap: 7px;
-			}
-
-			&-cancel {
-				display: flex;
-				justify-content: space-between;
-				gap: 5px;
-				align-items: center;
-				border: none;
-				padding: 12px;
-				background-color: rgb(212, 212, 212);
-				font-family: var(--font-heading);
-				color: white;
-				font-size: clamp(0.9rem, 1vw, 2rem);
-				font-weight: 700;
-				border-radius: 10px;
-				cursor: pointer;
-				text-shadow: 0px 2px 8px rgba(99, 99, 99, 0.2);
-			}
-
 			&-submit {
 				display: flex;
 				justify-content: space-between;
@@ -246,6 +225,18 @@
 				}
 			}
 		}
+	}
+
+	&__navbar {
+		width: 100%;
+		display: flex;
+		justify-content: flex-end;
+		gap: 7px;
+		background-color: var(--secondary-color);
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: 500;
 	}
 
 	&__add-btn {

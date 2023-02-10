@@ -13,4 +13,29 @@
 	--thursday-color: rgb(94, 162, 113);
 	--friday-color: rgb(119, 132, 131);
 	--anim-duration: 0.3s;
+	--monday-gradient: linear-gradient(
+		222deg,
+		rgba(74, 107, 224, 1) 0%,
+		rgba(112, 141, 246, 1) 100%
+	);
+	--tuesday-gradient: linear-gradient(
+		216deg,
+		rgba(255, 192, 89, 1) 0%,
+		rgba(255, 156, 0, 1) 100%
+	);
+	--wednesday-gradient: linear-gradient(
+		216deg,
+		rgba(255, 109, 114, 1) 0%,
+		rgba(227, 87, 91, 1) 100%
+	);
+	--thursday-gradient: linear-gradient(
+		310deg,
+		rgba(94, 162, 113, 1) 0%,
+		rgba(39, 148, 69, 1) 100%
+	);
+	--friday-gradient: linear-gradient(
+		310deg,
+		rgba(119, 132, 131, 1) 0%,
+		rgba(98, 108, 108, 1) 100%
+	);
 }
