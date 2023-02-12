@@ -34,14 +34,14 @@
 		padding: 15px;
 		position: fixed;
 		margin: auto;
-		top: 15px;
+		top: 35px;
 		bottom: 0px;
 		display: initial;
 		background: rgb(255, 236, 222, 0.8);
 		-webkit-backdrop-filter: blur(10px);
 		backdrop-filter: blur(10px);
 		border: 1px solid rgba(176, 196, 222, 0.25);
-		border-radius: 15px;
+		border-radius: 15px 15px 0px 0px;
 		font-family: var(--font-heading);
 		animation-name: modalCardAnim;
 		animation-duration: var(--anim-duration);
@@ -49,6 +49,7 @@
 		animation-iteration-count: 1;
 		animation-fill-mode: forwards;
 		animation-direction: normal;
+		box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 
 		@media (min-width: 768px) {
 			width: 600px;

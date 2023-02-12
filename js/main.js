@@ -18,7 +18,7 @@ class Day {
 		modal.style.display = "flex";
 		modalDayName.textContent = this.name;
 
-		const lessonsNameList = this.lessons.map((lesson) => {
+		this.lessons.map((lesson) => {
 			const lessonName = document.createElement("h3");
 			lessonName.className = "modal__card-lesson";
 			lessonName.textContent = lesson.name;
@@ -33,8 +33,6 @@ class Day {
 				});
 			}
 		});
-
-		console.log(lessonsNameList);
 	}
 }
 
@@ -42,26 +40,11 @@ const monday = new Day({
 	name: "Понедельник",
 	lessons: [
 		{
-			name: "Громадська ек. діяльність",
-			tasks: ["сделать конспект", "переписать параграф"],
-		},
-		{
 			name: "Укр. Мова",
 			tasks: [
 				"выполнить задание в конце конспекта",
 				"переписать параграф",
 			],
-		},
-		{
-			name: "Англ. Мова",
-			tasks: [
-				"выполнить задание в конце конспекта",
-				"переписать параграф",
-			],
-		},
-		{
-			name: "Біологія",
-			tasks: [],
 		},
 	],
 	color: "#4a6be0",
